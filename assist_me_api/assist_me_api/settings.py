@@ -88,7 +88,7 @@ WSGI_APPLICATION = 'assist_me_api.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'django_contacts',
+        'NAME': 'assist_api',
         'USER': '',
         'PASSWORD': '',
         'HOST': 'localhost'
