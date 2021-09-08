@@ -13,5 +13,5 @@ urlpatterns = [
     path('api/daily/<int:pk>', views.DailyDetail.as_view(), name='daily_detail'),
     path('api/users', views.UserList.as_view(), name='user_list'),
     path('api/users/<int:pk>', views.UserDetail.as_view(), name='user_detail'),
-    path('api/users/login', csrf_exempt(views.Check_Login), name='check_login'),
+    path('api/users/login', csrf_exempt(views.check_login), name='check_login'),
 ]
