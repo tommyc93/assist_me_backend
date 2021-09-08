@@ -9,12 +9,12 @@ from .models import User
 class BudgetSerializer(serializers.ModelSerializer):
     class Meta:
         model = Budget
-        fields = ('id', 'income', 'name', 'cost', 'note',)
+        fields = ('id', 'name', 'cost', 'note',)
 
 class ExpenseSerializer(serializers.ModelSerializer):
     class Meta:
         model = Expense
-        fields = ('id', 'income', 'name', 'cost', 'note',)
+        fields = ('id', 'name', 'cost', 'note',)
 
 class TaskSerializer(serializers.ModelSerializer):
     class Meta:
