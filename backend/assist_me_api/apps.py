@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class AssistApiConfig(AppConfig):
+class AssistMeApiConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'assist_api'
+    name = 'assist_me_api'

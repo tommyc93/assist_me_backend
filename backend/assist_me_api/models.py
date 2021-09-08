@@ -1,14 +1,24 @@
 from django.db import models
-from django.contrib.postgres.fields import ArrayField
-# Create your models here.
 
+# Create your models here.
 class Budget(models.Model):
     income = models.IntegerField(null=True, blank=True)
     name = models.CharField(max_length=32)
     cost = models.IntegerField(null=True, blank=True)
     note = models.CharField(max_length=400, blank=True)
 
+class Expense(models.Model):
+    income = models.IntegerField(null=True, blank=True)
+    name = models.CharField(max_length=32)
+    cost = models.IntegerField(null=True, blank=True)
+    note = models.CharField(max_length=400, blank=True)
+
 class Task(models.Model):
+    name = models.CharField(max_length=32)
+    time = models.IntegerField(null=True, blank=True)
+    note = models.CharField(max_length=400, blank=True)
+
+class Daily(models.Model):
     name = models.CharField(max_length=32)
     time = models.IntegerField(null=True, blank=True)
     note = models.CharField(max_length=400, blank=True)

@@ -1,9 +1,16 @@
 from rest_framework import generics
+
 from .serializers import BudgetSerializer
 from .models import Budget
 
+from .serializers import ExpenseSerializer
+from .models import Expense
+
 from .serializers import TaskSerializer
 from .models import Task
+
+from .serializers import DailySerializer
+from .models import Daily
 
 from .serializers import UserSerializer
 from .models import User
@@ -21,6 +28,14 @@ class BudgetDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Budget.objects.all().order_by('id')
     serializer_class = BudgetSerializer
 
+class ExpenseList(generics.ListCreateAPIView):
+    queryset = Expense.objects.all().order_by('id')
+    serializer_class = ExpenseSerializer
+
+class ExpenseDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Expense.objects.all().order_by('id')
+    serializer_class = ExpenseSerializer
+
 class TaskList(generics.ListCreateAPIView):
     queryset = Task.objects.all().order_by('id')
     serializer_class = TaskSerializer
@@ -28,6 +43,14 @@ class TaskList(generics.ListCreateAPIView):
 class TaskDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Task.objects.all().order_by('id')
     serializer_class = TaskSerializer
+
+class DailyList(generics.ListCreateAPIView):
+    queryset = Daily.objects.all().order_by('id')
+    serializer_class = DailySerializer
+
+class DailyDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Daily.objects.all().order_by('id')
+    serializer_class = DailySerializer
 
 class UserList(generics.ListCreateAPIView):
     queryset = User.objects.all().order_by('id')
